@@ -1,7 +1,7 @@
 import streamlit as st
 import tensorflow as tf
 
-from audio_utils import wav_to_spectrogram_image
+from app.audio.audio_utils import wav_to_spectrogram_image
 from gradcam_utils import compute_gradcam, overlay_gradcam
 from lime_utils import compute_lime
 from shap_utils import compute_shap

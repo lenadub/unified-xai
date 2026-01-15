@@ -1,0 +1,49 @@
+{
+  "Audio": {
+    "input_type": "wav",
+    "models": {
+      "MobileNet": {
+        "path": "weights/audio/mobilenet",
+        "framework": "tensorflow",
+        "gradcam_layer": "conv_pw_13_relu",
+        "xai_methods": ["Grad-CAM", "LIME", "SHAP"]
+      },
+      "VGG16": {
+        "path": "weights/audio/vgg16",
+        "framework": "tensorflow",
+        "gradcam_layer": "block5_conv3",
+        "xai_methods": ["Grad-CAM", "LIME", "SHAP"]
+      },
+      "ResNet50": {
+        "path": "weights/audio/resnet50",
+        "framework": "tensorflow",
+        "gradcam_layer": "conv5_block3_out",
+        "xai_methods": ["Grad-CAM", "LIME", "SHAP"]
+      },
+      "Custom CNN": {
+        "path": "weights/audio/custom_cnn",
+        "framework": "tensorflow",
+        "gradcam_layer": "conv2d_2",
+        "xai_methods": ["Grad-CAM", "LIME", "SHAP"]
+      }
+    }
+  },
+
+  "Image": {
+    "input_type": "image",
+    "models": {
+      "AlexNet": {
+        "path": "weights/images/alexnet/best_model.pt",
+        "framework": "pytorch",
+        "gradcam_layer": "features.11",
+        "xai_methods": ["Grad-CAM", "LIME", "SHAP"]
+      },
+      "DenseNet121": {
+        "path": "weights/images/densenet121/best_model.pt",
+        "framework": "pytorch",
+        "gradcam_layer": "features.denseblock4",
+        "xai_methods": ["Grad-CAM", "LIME", "SHAP"]
+      }
+    }
+  }
+}
